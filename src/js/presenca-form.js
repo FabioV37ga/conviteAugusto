@@ -1,3 +1,4 @@
+// https://docs.google.com/spreadsheets/d/1uRevqsAMCLDQTv2iP-IbilNk1Df4AiVwk9b9qyh8sdY/edit?gid=0#gid=0
 const scriptURL = 'https://script.google.com/macros/s/AKfycbztBsbN2kkgqh8lSJ07NMGr2DEZYU9SPOolJJCpeaoj3FwTnacxwsam-Cf1eVYASI3B/exec'; // Coloque aqui a URL gerada pelo Google Apps Script
 const form = document.forms['sheetForm'];
 
