@@ -30,3 +30,7 @@ body {
         zoom: 60%
     }
 }
+
+* a:hover{
+    cursor: pointer;
+}
