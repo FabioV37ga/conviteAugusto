@@ -18,5 +18,5 @@ function toggleGiftWindow() {
 var pix = document.querySelector(".pix")
 pix.addEventListener("click", ()=>{
     console.log(pix.textContent)
-    navigator.clipboard.writeText(pix.textContent)
+    navigator.clipboard.writeText(pix.textContent.replaceAll(" ", "").trim())
 })

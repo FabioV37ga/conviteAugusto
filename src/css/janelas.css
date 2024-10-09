@@ -72,16 +72,16 @@
     }
 }
 
-.out{
+.out {
     animation: .3s hideOverlay linear;
 }
 
 @keyframes hideOverlay {
-    0%{
+    0% {
         opacity: 100%;
     }
 
-    100%{
+    100% {
         opacity: 0%;
     }
 }
@@ -102,11 +102,13 @@
         scale: 1%;
         opacity: 0%
     }
-    5%{
+
+    5% {
         scale: 5%;
         opacity: 100%
     }
-    15%{
+
+    15% {
         scale: 100%;
         opacity: 100%;
     }
@@ -283,7 +285,11 @@
     text-align: left !important;
 }
 
-.gift-text a{
+.pix i.fa.fa-clone {
+    margin-left: 7px;
+}
+
+.gift-text a {
     font-size: 13px;
     font-family: 'lemon';
 }
@@ -320,6 +326,6 @@
     }
 
     .gift-append {
-        margin-bottom: calc(541px + 34px);
+        margin-bottom: 633px;
     }
 }
