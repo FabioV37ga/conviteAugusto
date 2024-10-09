@@ -46,6 +46,66 @@
     height: 379px;
 }
 
+.presenca-append-overlay {
+    display: none;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    position: absolute;
+    width: 395px;
+    height: 344px;
+    left: 0;
+    border-radius: 0px 0px 25px 25px;
+    top: 55px;
+    z-index: 2;
+    background: var(--main-color);
+    animation: 3s showOverlay linear;
+}
+
+@keyframes showOverlay {
+    0% {
+        opacity: 0%;
+    }
+
+    5% {
+        opacity: 100%;
+    }
+}
+
+.out{
+    animation: .3s hideOverlay linear;
+}
+
+@keyframes hideOverlay {
+    0%{
+        opacity: 100%;
+    }
+
+    100%{
+        opacity: 0%;
+    }
+}
+
+.presenca-append-overlay .overlay-content {
+    text-align: center;
+    color: white;
+    font-size: 58px;
+    display: flex;
+    /* height: 131px; */
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.presenca-append-overlay i {
+    width: 100%;
+    text-align: center;
+    font-size: 60px !important;
+}
+
+.presenca-append-overlay span {
+    font-size: 25px;
+}
+
 .presenca-append-content {
     display: flex;
     justify-content: center;
@@ -123,19 +183,19 @@
     right: 317px;
 }
 
-.presenca-append-form .form-items .aditional-item{
+.presenca-append-form .form-items .aditional-item {
     /* background: blue; */
     width: 296px;
     display: flex;
     justify-content: space-between;
 }
 
-.presenca-append-form .form-items .aditional-item input{
+.presenca-append-form .form-items .aditional-item input {
     width: 260px;
     width: 75%;
 }
 
-.presenca-append-form .item-remove{
+.presenca-append-form .item-remove {
     font-size: 32px;
 }
 
@@ -146,7 +206,7 @@
     height: 478px;
 }
 
-.map-append-content-loading{
+.map-append-content-loading {
     position: absolute;
     z-index: 1;
     width: 100%;
@@ -226,14 +286,16 @@
     right: 50px;
 }
 
-@media (min-width: 1200px){
-    .presenca-append{
+@media (min-width: 1200px) {
+    .presenca-append {
         margin-bottom: calc(520px + 34px);
     }
-    .map-append{
+
+    .map-append {
         margin-bottom: calc(620px + 34px);
     }
-    .gift-append{
+
+    .gift-append {
         margin-bottom: calc(541px + 34px);
     }
 }

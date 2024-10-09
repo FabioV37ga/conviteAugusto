@@ -31,7 +31,7 @@ submitButton.addEventListener('click', () => {
                     .then(result => {
                         // SUCESSO
                         console.log('Sucesso:', result); // Mensagem de sucesso
-                        valid = valid == false ? true : 0;
+                        valid = true
 
                     })
                     .catch(error => {
@@ -42,7 +42,7 @@ submitButton.addEventListener('click', () => {
                 // input sem valor
                 textField[index].placeholder = "Insira Nome e Documento!"
                 var timeout = setTimeout(() => {
-                    for (let i = 0; i <= textField.length - 1; i++){
+                    for (let i = 0; i <= textField.length - 1; i++) {
                         textField[i].placeholder = "Nome - Documento (RG/CPF)"
                     }
                 }, 1800);
@@ -51,7 +51,7 @@ submitButton.addEventListener('click', () => {
         } else {
             if (valid == true) {
                 mostrarJanelaSucesso()
-                limparCampos()
+
             }
             clearInterval(intervalo)
         }
@@ -59,10 +59,25 @@ submitButton.addEventListener('click', () => {
 
     function mostrarJanelaSucesso() {
         // console.log("mjs")
+        var overlay = document.querySelector(".presenca-append-overlay")
+        function handleAnimationEnd() {
+
+            limparCampos()
+            overlay.removeEventListener("animationend", handleAnimationEnd)
+
+            function handleAnimationEndOut() {
+                overlay.classList.remove("out")
+                overlay.style.display = 'none'
+                overlay.removeEventListener("animationend", handleAnimationEndOut)
+            }
+            overlay.addEventListener("animationend", handleAnimationEndOut)
+            overlay.classList.add("out")
+        }
+        overlay.addEventListener("animationend", handleAnimationEnd)
+        overlay.style.display = 'flex'
     }
 
     function limparCampos() {
-        // console.log("lc")
         textField[0].value = ""
         var camposAdicionais = document.querySelectorAll(".aditional-item")
         for (let i = 0; i <= camposAdicionais.length - 1; i++) {
