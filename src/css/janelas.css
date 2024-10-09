@@ -41,8 +41,8 @@
 /* Janela "Confirme sua presença" */
 
 .presenca-append {
-    margin-bottom: 503px;
-    margin-right: -259px;
+    margin-bottom: 520px;
+    margin-right: -266px;
     height: 379px;
 }
 
@@ -120,7 +120,7 @@
 .presenca-pointer {
     /* z-index: -1; */
     bottom: -21px;
-    right: 313px;
+    right: 317px;
 }
 
 .presenca-append-form .form-items .aditional-item{
@@ -142,8 +142,7 @@
 /* Janela "Como chegar" */
 
 .map-append {
-    margin-bottom: 595px;
-    margin-right: -12px;
+    margin-bottom: 620px;
     height: 478px;
 }
 
@@ -169,13 +168,13 @@
 .map-pointer {
     z-index: -1;
     bottom: -21px;
-    right: 190px;
+    right: 184px
 }
 
 /* Janela "Sugestão de presentes" */
 .gift-append {
-    margin-bottom: 517px;
-    margin-right: 245px;
+    margin-bottom: 541px;
+    margin-right: 266px;
 }
 
 .append-header-close {
@@ -224,5 +223,5 @@
 
 .gift-pointer {
     bottom: -21px;
-    right: 62px;
+    right: 50px;
 }
