@@ -59,7 +59,7 @@
     font-size: 13px;
 }
 
-.button-label{
+.button-label {
     margin-top: 6px
 }
 
@@ -100,6 +100,10 @@
 
     .botao {
         width: 90px
+    }
+
+    .button {
+        width: 100%;
     }
 }
 
