@@ -94,6 +94,22 @@
     /* height: 131px; */
     justify-content: center;
     flex-wrap: wrap;
+    animation: 2s zoomIn linear;
+}
+
+@keyframes zoomIn {
+    0% {
+        scale: 1%;
+        opacity: 0%
+    }
+    5%{
+        scale: 5%;
+        opacity: 100%
+    }
+    15%{
+        scale: 100%;
+        opacity: 100%;
+    }
 }
 
 .presenca-append-overlay i {
@@ -103,7 +119,8 @@
 }
 
 .presenca-append-overlay span {
-    font-size: 25px;
+    font-size: 19px;
+    font-family: 'lemon';
 }
 
 .presenca-append-content {
