@@ -250,8 +250,9 @@
 
 /* Janela "Sugestão de presentes" */
 .gift-append {
-    margin-bottom: 541px;
+    margin-bottom: 599px;
     margin-right: 266px;
+    height: 459px;
 }
 
 .append-header-close {
@@ -267,7 +268,8 @@
 }
 
 .gift-append-content li {
-    margin-top: 35px;
+    margin-top: 17px;
+    margin-bottom: 17px;
     background: var(--dark-main-color);
     height: 57px;
     width: 80%;
@@ -279,6 +281,11 @@
     color: white !important;
     font-family: lemon !important;
     text-align: left !important;
+}
+
+.gift-text a{
+    font-size: 13px;
+    font-family: 'lemon';
 }
 
 .gift-image {
