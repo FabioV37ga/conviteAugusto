@@ -225,3 +225,15 @@
     bottom: -21px;
     right: 50px;
 }
+
+@media (min-width: 1200px){
+    .presenca-append{
+        margin-bottom: calc(520px + 34px);
+    }
+    .map-append{
+        margin-bottom: calc(620px + 34px);
+    }
+    .gift-append{
+        margin-bottom: calc(541px + 34px);
+    }
+}
