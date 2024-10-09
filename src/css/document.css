@@ -11,9 +11,10 @@
 body {
     height: 100vh;
     background: var(--main-color);
+    /* margin-left: -14px; */
 }
 
-@media (max-width: 510px) {
+@media (max-width: 520px) {
     html {
         zoom: 90%
     }
@@ -31,6 +32,15 @@ body {
     }
 }
 
-* a:hover{
+a {
+    -webkit-user-select: none;
+    /* Safari */
+    -ms-user-select: none;
+    /* IE 10 and IE 11 */
+    user-select: none;
+    /* Standard syntax */
+}
+
+* a:hover {
     cursor: pointer;
 }
