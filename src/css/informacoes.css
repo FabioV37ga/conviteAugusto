@@ -4,6 +4,7 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    position: relative;
 }
 
 .data-e-hora span {
@@ -11,7 +12,31 @@
     text-align: center;
     color: white;
     font-family: lemon;
+    -webkit-user-select: none;
+    /* Safari */
+    -ms-user-select: none;
+    /* IE 10 and IE 11 */
+    user-select: none;
+    /* Standard syntax */
+    cursor: pointer;
 }
+
+.copyStatus {
+    position: absolute;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    bottom: 20px;
+    margin-left: 390px;
+    display: none;
+}
+
+/* .data-e-hora .copyIcon{
+    color: white;
+    position: absolute;
+    bottom: 4px;
+    margin-left: 15px;
+    font-size: 13px;
+} */
 
 .botoes {
     width: 100%;
