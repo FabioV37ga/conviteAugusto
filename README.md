@@ -1,7 +1,19 @@
-# 📋 conviteAugusto
-Website responsivo de um convite de festa de aniversário infantil, com informações gerais do evento e formulário de presença integrado com Google Sheets.
+# 📋 __conviteAugusto__
+>📌 Website responsivo de um convite de festa de aniversário infantil, com informações gerais do evento, formulário de presença e mapa interativo.
+><br>
+>📌 <a href="https://github.com/FabioV37ga">Acessar Portfólio</a>
 <br>
+✅ Mobile e Desktop <br>
+✅ Convite Temático <br>
+✅ Informações do Evento _(Endereço, data, horário e sugestão de presente)_ <br>
+✅ Janelas informativas <br>
+✅ Sistema de Cadastro de convidado integrado com Google Sheets <br>
+✅ Mapa interativo do local do evento <br><br>
 
+
+🟢 <a href="https://fabioV37ga.github.io/conviteAugusto">__Acesse o Site__</a>
+<br><br><br>
+💾 Screenshots do Sistema
 <div display=flex>
   <img src="https://github.com/user-attachments/assets/fc814104-f1f5-4ecb-8ff0-415fdea84273" width="216"></img>
   <img src="https://github.com/user-attachments/assets/cdbc5024-b0c0-456a-b72a-045603b64e07" width="573"></img>
