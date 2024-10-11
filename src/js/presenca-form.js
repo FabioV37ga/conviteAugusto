@@ -5,57 +5,66 @@ const form = document.forms['sheetForm'];
 // Captura o botão de envio e o campo de texto
 var submitButton = document.querySelector(".form-confirm")
 
+var cooldown = false;
 // Adiciona um listener de clique no botão
 submitButton.addEventListener('click', () => {
-    var textField = document.querySelectorAll(".presenca-append-form-item")
-    // Pega o valor do campo de texto
-    var index = 0;
-    var valid = false;
+    // console.log(cooldown)
+    if (cooldown == false) {
+        cooldown = true;
+        setInterval(() => {
+            cooldown = false;
+        }, 3000);
 
-    var intervalo = setInterval(() => {
-        if (index <= textField.length - 1) {
-            const inputValue = textField[index].value;
-            if (inputValue) {
-                valid = true;
-                // Faz a requisição POST ao Google Apps Script
-                fetch(scriptURL, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/x-www-form-urlencoded' // Envia como formulário
-                    },
-                    body: new URLSearchParams({
-                        'textField': inputValue // O campo 'textField' deve ser o mesmo usado no Google Apps Script
-                    })
-                })
-                    .then(response => response.text())
-                    .then(result => {
-                        // SUCESSO
-                        console.log('Sucesso:', result); // Mensagem de sucesso
-                        valid = true
+        var textField = document.querySelectorAll(".presenca-append-form-item")
+        // Pega o valor do campo de texto
+        var index = 0;
+        var valid = false;
 
+        var intervalo = setInterval(() => {
+            if (index <= textField.length - 1) {
+                const inputValue = textField[index].value;
+                if (inputValue) {
+                    valid = true;
+                    // Faz a requisição POST ao Google Apps Script
+                    fetch(scriptURL, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/x-www-form-urlencoded' // Envia como formulário
+                        },
+                        body: new URLSearchParams({
+                            'textField': inputValue // O campo 'textField' deve ser o mesmo usado no Google Apps Script
+                        })
                     })
-                    .catch(error => {
-                        // ERRO
-                        console.log('Erro', result)
-                    });
+                        .then(response => response.text())
+                        .then(result => {
+                            // SUCESSO
+                            console.log('Sucesso:', result); // Mensagem de sucesso
+                            valid = true
+
+                        })
+                        .catch(error => {
+                            // ERRO
+                            console.log('Erro', result)
+                        });
+                } else {
+                    // input sem valor
+                    textField[index].placeholder = "Insira Nome e Documento!"
+                    var timeout = setTimeout(() => {
+                        for (let i = 0; i <= textField.length - 1; i++) {
+                            textField[i].placeholder = "Nome - Documento (RG/CPF)"
+                        }
+                    }, 1800);
+                }
+                index++
             } else {
-                // input sem valor
-                textField[index].placeholder = "Insira Nome e Documento!"
-                var timeout = setTimeout(() => {
-                    for (let i = 0; i <= textField.length - 1; i++) {
-                        textField[i].placeholder = "Nome - Documento (RG/CPF)"
-                    }
-                }, 1800);
-            }
-            index++
-        } else {
-            if (valid == true) {
-                mostrarJanelaSucesso()
+                if (valid == true) {
+                    mostrarJanelaSucesso()
 
+                }
+                clearInterval(intervalo)
             }
-            clearInterval(intervalo)
-        }
-    }, 300);
+        }, 300);
+    }
 
     function mostrarJanelaSucesso() {
         // console.log("mjs")
