@@ -1,5 +1,5 @@
 # 📋 __conviteAugusto__
->📌 Website responsivo de um convite de festa de aniversário infantil, com informações gerais do evento, formulário de presença e mapa interativo.
+>📌 Convite Augusto: Website responsivo de um convite de festa de aniversário infantil, com informações gerais do evento, formulário de presença e mapa interativo.
 ><br>
 >📌 <a href="https://github.com/FabioV37ga">Acessar Portfólio</a>
 <br>
