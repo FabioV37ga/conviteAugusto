@@ -5,7 +5,7 @@
 <br>
 ✅ Mobile e Desktop <br>
 ✅ Convite Temático <br>
-✅ Informações do Evento _(Endereço, data, horário e sugestão de presente)_ <br>
+✅ Informações do Evento (Endereço, data, horário e sugestão de presente) <br>
 ✅ Janelas informativas <br>
 ✅ Sistema de Cadastro de convidado integrado com Google Sheets <br>
 ✅ Mapa interativo do local do evento <br><br>
