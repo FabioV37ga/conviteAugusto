@@ -1,11 +1,6 @@
-/* @font-face {
+@font-face {
     font-family: incriveis;
     src: url(../incriveis.ttf);
-} */
-
-@font-face {
-    font-family: reiLeao;
-    src: url(../lion_king.ttf);
 }
 
 @font-face {
@@ -15,28 +10,25 @@
 
 body {
     height: 100vh;
-    background: var(--main-background-color);
+    background: var(--main-color);
     /* margin-left: -14px; */
 }
 
 @media (max-width: 520px) {
     html {
-        zoom: 90%;
-        height: 115vh;
+        zoom: 90%
     }
 }
 
 @media (max-width: 460px) {
     html {
-        zoom: 75%;
-        height: 135vh;
+        zoom: 75%
     }
 }
 
 @media (max-width: 400px) {
     html {
-        zoom: 60%;
-        height: 200vh;
+        zoom: 60%
     }
 }
 

@@ -6,8 +6,7 @@
     width: 375px;
     background: var(--main-color);
     border-radius: 25px;
-    padding: 10px;
-    z-index: 3;
+    padding: 10px
 }
 
 .append-header {
