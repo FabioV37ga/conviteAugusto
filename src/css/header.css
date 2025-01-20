@@ -9,7 +9,7 @@ header {
     background: var(--dark-main-color);
     background-image: url(../img/simba.gif);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 146%;
     background-position: center;
     position: relative;
     display: flex;
@@ -17,7 +17,7 @@ header {
     z-index: 0;
 }
 
-header::after{
+header::after {
     z-index: 1;
     content: '';
     height: 100%;
@@ -36,11 +36,14 @@ header::after{
 
 @media (min-width: 1200px) {
     header {
-        height: 250px
+        height: 350px;
+        background-size: 100%;
+        /* background-position: 0 -250px; */
+        background-position: 0 55%
     }
 
     .image-container img {
-        margin-top: 232px;
+        margin-top: 290px;
         width: 560px;
     }
 }
