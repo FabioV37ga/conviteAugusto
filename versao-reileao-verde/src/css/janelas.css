@@ -1,0 +1,344 @@
+/* Estilização das janelas */
+.append {
+    display: none;
+    position: absolute;
+    height: 400px;
+    width: 375px;
+    background: var(--main-color);
+    border-radius: 25px;
+    padding: 10px;
+    z-index: 3;
+    animation: popWindow .15s linear;
+}
+
+@keyframes  popWindow{
+    0%{
+        opacity: 0%;
+        transform: translateY(13px);
+    }
+    100%{
+        opacity: 100%;
+        transform: translateY(0px);
+    }
+}
+
+.append-header {
+    color: white;
+    margin-top: -10px;
+    margin-left: -10px;
+    background: var(--dark-main-color);
+    width: 375px;
+    border-radius: 25px 25px 0 0;
+    height: 35px;
+    padding: 10px;
+    margin-bottom: 25px;
+}
+
+.append-header * {
+    position: absolute;
+}
+
+.append h1 {
+    font-family: lemon;
+    top: 15px;
+    left: 35px;
+}
+
+.pointer {
+    rotate: 90deg;
+    position: absolute;
+    color: var(--main-color);
+    font-size: 30px;
+}
+
+/* Janela "Confirme sua presença" */
+
+.presenca-append {
+    margin-bottom: 520px;
+    margin-right: -266px;
+    height: 379px;
+}
+
+.presenca-append-overlay {
+    display: none;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    position: absolute;
+    width: 395px;
+    height: 344px;
+    left: 0;
+    border-radius: 0px 0px 25px 25px;
+    top: 55px;
+    z-index: 2;
+    background: var(--main-color);
+    animation: 3s showOverlay linear;
+}
+
+@keyframes showOverlay {
+    0% {
+        opacity: 0%;
+    }
+
+    5% {
+        opacity: 100%;
+    }
+}
+
+.out {
+    animation: .3s hideOverlay linear;
+}
+
+@keyframes hideOverlay {
+    0% {
+        opacity: 100%;
+    }
+
+    100% {
+        opacity: 0%;
+    }
+}
+
+.presenca-append-overlay .overlay-content {
+    text-align: center;
+    color: white;
+    font-size: 58px;
+    display: flex;
+    /* height: 131px; */
+    justify-content: center;
+    flex-wrap: wrap;
+    animation: 2s zoomIn linear;
+}
+
+@keyframes zoomIn {
+    0% {
+        scale: 1%;
+        opacity: 0%
+    }
+
+    5% {
+        scale: 5%;
+        opacity: 100%
+    }
+
+    15% {
+        scale: 100%;
+        opacity: 100%;
+    }
+}
+
+.presenca-append-overlay i {
+    width: 100%;
+    text-align: center;
+    font-size: 60px !important;
+}
+
+.presenca-append-overlay span {
+    font-size: 19px;
+    font-family: 'lemon';
+}
+
+.presenca-append-content {
+    display: flex;
+    justify-content: center;
+}
+
+.presenca-append-form {
+    width: 90%;
+    height: 238px;
+}
+
+.presenca-append-content .form-items::-webkit-scrollbar {
+    width: 5px;
+}
+
+.presenca-append-content .form-items::-webkit-scrollbar-track {
+    background: var(--main-color);
+}
+
+.presenca-append-content .form-items::-webkit-scrollbar-thumb {
+    background: var(--dark-main-color);
+}
+
+.presenca-append-content .form-items {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    display: flex;
+    height: fit-content;
+    max-height: 238px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.presenca-append-form .form-items input {
+    border: none;
+    width: 260px;
+    height: 35px;
+    border-radius: 7px;
+    padding: 0 18px;
+    margin-bottom: 10px;
+}
+
+.presenca-append-form .add-container {
+    width: 100%
+}
+
+.presenca-append-form .form-confirm {
+    font-size: 20px;
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    text-transform: uppercase;
+    font-family: 'lemon';
+    background: var(--dark-main-color);
+    padding: 5px 10px;
+    border-radius: 13px;
+}
+
+.presenca-append-form .form-items .form-add {
+    font-weight: 700;
+    font-size: 42px;
+    border-radius: 100%;
+    background: var(--dark-main-color);
+    height: 50px;
+    width: 50px;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.presenca-pointer {
+    /* z-index: -1; */
+    bottom: -21px;
+    right: 317px;
+}
+
+.presenca-append-form .form-items .aditional-item {
+    /* background: blue; */
+    width: 296px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.presenca-append-form .form-items .aditional-item input {
+    width: 260px;
+    width: 75%;
+}
+
+.presenca-append-form .item-remove {
+    font-size: 32px;
+}
+
+/* Janela "Como chegar" */
+
+.map-append {
+    margin-bottom: 620px;
+    height: 478px;
+}
+
+.map-append-content-loading {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    text-align: center;
+    font-size: 24px !important;
+}
+
+.map-append-content iframe {
+    z-index: 2;
+    border: 0;
+    width: 394px;
+    position: absolute;
+    top: 55px;
+    left: 0px;
+    height: 443px;
+    border-radius: 0px 0px 25px 25px;
+}
+
+.map-pointer {
+    z-index: -1;
+    bottom: -21px;
+    right: 184px
+}
+
+/* Janela "Sugestão de presentes" */
+.gift-append {
+    margin-bottom: 599px;
+    margin-right: 266px;
+    height: 459px;
+}
+
+.append-header-close {
+    font-size: 35px !important;
+    right: 45px;
+}
+
+.gift-append-content ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none
+}
+
+.gift-append-content li {
+    margin-top: 17px;
+    margin-bottom: 17px;
+    background: var(--dark-main-color);
+    height: 57px;
+    width: 80%;
+    display: flex;
+    align-items: center;
+}
+
+.gift-text {
+    color: white !important;
+    font-family: lemon !important;
+    text-align: left !important;
+}
+
+.pix i.fa.fa-clone {
+    margin-left: 7px;
+}
+
+.gift-text a {
+    font-size: 13px;
+    font-family: 'lemon';
+}
+
+.gift-image {
+    margin-left: -22px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--dark-main-color);
+    width: 105px;
+    height: 80px;
+}
+
+.gift-image img {
+    width: 50px !important;
+    filter: invert(100%);
+}
+
+
+.gift-pointer {
+    bottom: -21px;
+    right: 50px;
+}
+
+@media (min-width: 1200px) {
+    .presenca-append {
+        margin-bottom: calc(520px + 34px);
+    }
+
+    .map-append {
+        margin-bottom: calc(620px + 34px);
+    }
+
+    .gift-append {
+        margin-bottom: 633px;
+    }
+}
