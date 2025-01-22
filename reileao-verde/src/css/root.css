@@ -1,0 +1,12 @@
+:root {
+  --main-color: rgb(2, 44, 18);
+  --main-background-color: linear-gradient(180deg, rgb(0 0 0) 0%, rgb(0 0 0) 27%, rgb(4 59 19) 42%, rgb(0 8 3) 100%);
+  --dark-main-color: rgb(1, 82, 32);
+  --dropshadow: drop-shadow(3px 12px 10px #000000d4);
+}
+
+@media (min-width: 1200px){
+  :root{
+    --main-background-color: linear-gradient(180deg, rgb(0 0 0) 0%, rgb(0 0 0) 30%, rgb(4 59 19) 42%, rgb(0 8 3) 100%);
+  }
+}
