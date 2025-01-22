@@ -1,5 +1,5 @@
 :root {
-  --main-color: rgb(203 131 53);
+  --main-color: rgb(173, 96, 15);
   --main-background-color: linear-gradient(180deg, rgb(0 0 0) 0%, rgb(0, 0, 0) 39%, rgb(128 71 13) 52%, rgb(0 0 0) 100%);
   --dark-main-color: rgb(203 131 53);
   --dropshadow: drop-shadow(3px 12px 10px #000000d4);
