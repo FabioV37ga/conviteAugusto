@@ -1,7 +1,7 @@
 class PresencaItem {
     static elementoItem = `<div class="form-item-container aditional-item">
     <input type="text" class="presenca-append-form-item"
-    placeholder="Nome - Documento (RG/CPF)">
+    placeholder="Nome completo">
     <a class="item-remove">
     <i class="fa fa-trash" aria-hidden="true"></i>
     </a>
