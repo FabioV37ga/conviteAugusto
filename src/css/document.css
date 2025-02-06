@@ -13,6 +13,12 @@
     src: url(../lemonmilk.otf);
 }
 
+header,
+main,
+footer {
+    filter: blur(10px)
+}
+
 body {
     height: 100vh;
     background: var(--main-background-color);

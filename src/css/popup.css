@@ -1,0 +1,45 @@
+.popup {
+    margin-top: 30px;
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-family: lemon;
+
+    
+}
+
+.popup-header {
+    z-index: 101;
+    position: absolute;
+    background: var(--dark-main-color);
+    width: 500px;
+    padding: 15px;
+    border-radius: 10px 10px 0 0
+}
+
+.popup-header span {
+    margin-left: 15px
+}
+
+.popup-content {
+    width: 475px;
+    background: var(--main-color);
+    padding: 85px 27px 90px 27px;
+    border-radius: 10px;
+    position: relative;
+    filter: var(--dropshadow);
+}
+
+.popup-close {
+    position: absolute;
+    bottom: 30px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    left: 218px;
+    cursor: pointer;
+    background: var(--dark-main-color);
+    filter: var(--dropshadow)
+}
