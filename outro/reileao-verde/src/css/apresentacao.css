@@ -1,0 +1,43 @@
+.apresentacao {
+    width: 100%;
+}
+
+.apresentacao h1 {
+    width: 100%;
+    color: rgb(248 184 37);
+    font-family: reiLeao;
+    text-align: center;
+    font-size: 65px
+}
+
+.idade {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: lemon;
+}
+
+.idade img {
+    width: inherit
+}
+
+.idade span {
+    position: absolute;
+    color: white;
+    font-size: 45px;
+    margin-top: 47px;
+}
+
+.frase {
+    font-family: lemon;
+    color: white;
+    margin-top: 95px;
+    width: 100%;
+    text-align: center;
+}
+
+.frase span {
+    width: 260px;
+}

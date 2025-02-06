@@ -1,0 +1,46 @@
+@font-face {
+    font-family: incriveis;
+    src: url(../incriveis.ttf);
+}
+
+@font-face {
+    font-family: lemon;
+    src: url(../lemonmilk.otf);
+}
+
+body {
+    height: 100vh;
+    background: var(--main-color);
+    /* margin-left: -14px; */
+}
+
+@media (max-width: 520px) {
+    html {
+        zoom: 90%
+    }
+}
+
+@media (max-width: 460px) {
+    html {
+        zoom: 75%
+    }
+}
+
+@media (max-width: 400px) {
+    html {
+        zoom: 60%
+    }
+}
+
+a {
+    -webkit-user-select: none;
+    /* Safari */
+    -ms-user-select: none;
+    /* IE 10 and IE 11 */
+    user-select: none;
+    /* Standard syntax */
+}
+
+* a:hover {
+    cursor: pointer;
+}
