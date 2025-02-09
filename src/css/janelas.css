@@ -181,7 +181,8 @@
 }
 
 .presenca-append-form .add-container {
-    width: 100%
+    width: 100%;
+    position: relative;
 }
 
 .presenca-append-form .form-confirm {
@@ -207,6 +208,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.form-add-desc{
+    position: absolute;
+    top: 18px;
+    left: 67px;
+    width: fit-content !important
 }
 
 .presenca-pointer {
