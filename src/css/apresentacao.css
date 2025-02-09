@@ -40,4 +40,5 @@
 
 .frase span {
     width: 260px;
+    user-select: none;
 }
