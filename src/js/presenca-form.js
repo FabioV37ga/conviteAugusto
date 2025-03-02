@@ -1,5 +1,6 @@
 // https://docs.google.com/spreadsheets/d/1uRevqsAMCLDQTv2iP-IbilNk1Df4AiVwk9b9qyh8sdY/edit?gid=0#gid=0
-const scriptURL = 'https://script.google.com/macros/s/AKfycbztBsbN2kkgqh8lSJ07NMGr2DEZYU9SPOolJJCpeaoj3FwTnacxwsam-Cf1eVYASI3B/exec'; // Coloque aqui a URL gerada pelo Google Apps Script
+const scriptURL = 'https://script.google.com/macros/s/AKfycbwKjIxaLBHF2QZc8yVdzVbUWiU6n4YoPYmUmmO9GBNaZ_qyVS0HxAyX-oj6Jw-OH-qMLg/exec'
+
 const form = document.forms['sheetForm'];
 
 // Captura o botão de envio e o campo de texto
@@ -8,62 +9,54 @@ var submitButton = document.querySelector(".form-confirm")
 var cooldown = false;
 // Adiciona um listener de clique no botão
 submitButton.addEventListener('click', () => {
-    // console.log(cooldown)
+    // consol
+    console.log(cooldown)
     if (cooldown == false) {
         cooldown = true;
-        setInterval(() => {
-            cooldown = false;
-        }, 3000);
+        // setInterval(() => {
+        //     cooldown = false;
+        // }, 3000);
 
         var textField = document.querySelectorAll(".presenca-append-form-item")
         // Pega o valor do campo de texto
+
+        var confirmacoes = []
+
+
         var index = 0;
-        var valid = false;
-
-        var intervalo = setInterval(() => {
-            if (index <= textField.length - 1) {
-                const inputValue = textField[index].value;
-                if (inputValue) {
-                    valid = true;
-                    // Faz a requisição POST ao Google Apps Script
-                    fetch(scriptURL, {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/x-www-form-urlencoded' // Envia como formulário
-                        },
-                        body: new URLSearchParams({
-                            'textField': inputValue // O campo 'textField' deve ser o mesmo usado no Google Apps Script
-                        })
-                    })
-                        .then(response => response.text())
-                        .then(result => {
-                            // SUCESSO
-                            console.log('Sucesso:', result); // Mensagem de sucesso
-                            valid = true
-
-                        })
-                        .catch(error => {
-                            // ERRO
-                            console.log('Erro', result)
-                        });
-                } else {
-                    // input sem valor
-                    textField[index].placeholder = "Insira Nome e Documento!"
-                    var timeout = setTimeout(() => {
-                        for (let i = 0; i <= textField.length - 1; i++) {
-                            textField[i].placeholder = "Nome - Documento (RG/CPF)"
-                        }
-                    }, 1800);
-                }
+        // console.log(textField)
+        for (let i = 0; i <= textField.length - 1; i++) {
+            if (textField[i].value && textField[i].value.toString().replaceAll(' ', '') != '') {
+                confirmacoes[index] = textField[i].value
                 index++
-            } else {
-                if (valid == true) {
-                    mostrarJanelaSucesso()
-
-                }
-                clearInterval(intervalo)
             }
-        }, 300);
+        }
+
+        // if (confirmacoes.length)
+        if (confirmacoes.length > 0) {
+            fetch(scriptURL, {
+                method: 'POST',
+                // mode: 'no-cors',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded' // Envia como formulário
+                },
+                body: new URLSearchParams({
+                    'convidados': confirmacoes // O campo 'textField' deve ser o mesmo usado no Google Apps Script
+                    // "textField" : confirmacoes[0]
+                })
+            })
+                .then(response => response.text())
+                .then(result => {
+                    // SUCESSO
+                    console.log('Sucesso:', result); // Mensagem de sucesso
+                    mostrarJanelaSucesso()
+                    cooldown = false;
+                })
+                .catch(error => {
+                    // ERRO
+                    console.log('Erro', result)
+                });
+        }
     }
 
     function mostrarJanelaSucesso() {
