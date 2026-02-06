@@ -11,12 +11,13 @@
     animation: popWindow .15s linear;
 }
 
-@keyframes  popWindow{
-    0%{
+@keyframes popWindow {
+    0% {
         opacity: 0%;
         transform: translateY(13px);
     }
-    100%{
+
+    100% {
         opacity: 100%;
         transform: translateY(0px);
     }
@@ -42,6 +43,7 @@
     font-family: lemon;
     top: 15px;
     left: 35px;
+    font-size: 20px;
 }
 
 .pointer {
@@ -210,7 +212,7 @@
     align-items: center;
 }
 
-.form-add-desc{
+.form-add-desc {
     position: absolute;
     top: 18px;
     left: 67px;
